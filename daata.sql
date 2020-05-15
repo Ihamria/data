@@ -18,6 +18,16 @@ create table users (
    constraint PK_USER primary key (UserId)
 );
 /*==============================================================*/
+/* Table : customer                                             */
+/*==============================================================*/
+create table customer (
+   customerName         varchar(254)         not null,
+   customerEmail        varchar(254)         null,
+   CreditCardInfo       varchar(254)         null,
+   accountBalance       float                null,
+   constraint PK_CUSTOMER primary key (customerName)
+)
+/*==============================================================*/
 /* Table : Orders                                            */
 /*==============================================================*/
 create table Orders (
@@ -140,15 +150,3 @@ SET orderDetailsId ='3', orderId='6', productId='9' , productName='fkk' , quanti
 /* Table: order_Details Delete    */
 DELETE FROM order_Details 
 WHERE orderId='6';
-
-
-      
-      
-      
-
-
-
-
-
-
-
